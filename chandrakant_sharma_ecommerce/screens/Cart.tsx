@@ -59,7 +59,7 @@ function decrementCount(item: ProductInterface, index : number){ // index will b
 function renderItem({item, index}) {
     return (
        <View style={styles.cartLine}>
-          <Text style={styles.lineLeft}>{item?.product?.name} x {item.qty}</Text>
+          <Text style={styles.lineLeft}>{item?.product?.name}</Text>
           <View style={styles.cartCountPrice}>
           <Text onPress={() => incrementCount(item, index)} style={styles.cartIncrementCountButton}>Increment Count</Text>
           <Text onPress={() => decrementCount(item, index)} style={styles.cartDecrementCountButton}>Decrement Count</Text>
