@@ -11,7 +11,7 @@ export function Cart() {
    * @param item 
    * @param index 
    */
-  function incrementCount(item) {
+  function incrementCount(item: any) {
     addItemToCart(item?.product?.id);
   }
 
@@ -21,7 +21,7 @@ export function Cart() {
    * @param index 
    * @returns 
    */
-  function decrementCount(item) {
+  function decrementCount(item: any) {
     decreaseItemCountFromCart(item?.product?.id);
   }
 
@@ -29,7 +29,7 @@ export function Cart() {
    * function to remove item from the cart
    * @param item 
    */
-  function removeThisItem(item) {
+  function removeThisItem(item: any) {
     removeItemFromCart(item?.product?.id);
   }
 
@@ -67,18 +67,18 @@ export function Cart() {
 
         <View style={styles.cartCountPrice}>
           <TouchableHighlight activeOpacity={0.6}
-            underlayColor="#DDDDDD" onPress={() => incrementCount(item, index)} style={styles.cartIncrementCountButton}>
+            underlayColor="#DDDDDD" onPress={() => incrementCount(item)} style={styles.cartIncrementCountButton}>
             <Text style={styles.cartIncrementCountText}>Increment Count</Text>
           </TouchableHighlight>
           <TouchableHighlight activeOpacity={0.6}
-            underlayColor="#DDDDDD" onPress={() => decrementCount(item, index)} style={styles.cartDecrementCountButton}>
+            underlayColor="#DDDDDD" onPress={() => decrementCount(item)} style={styles.cartDecrementCountButton}>
             <Text style={styles.cartDecrementCountText}>Decrement Count</Text>
           </TouchableHighlight>
         </View>
 
         <View style={styles.cartCountPrice}>
           <TouchableHighlight activeOpacity={0.6}
-            underlayColor="#DDDDDD" onPress={() => removeThisItem(item, index)} style={styles.cartRemoveItemButton}>
+            underlayColor="#DDDDDD" onPress={() => removeThisItem(item)} style={styles.cartRemoveItemButton}>
             <Text style={styles.cartRemoveItemText}>Remove this Item</Text>
           </TouchableHighlight>
         </View>
