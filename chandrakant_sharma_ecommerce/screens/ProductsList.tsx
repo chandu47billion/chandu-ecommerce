@@ -33,6 +33,7 @@ function renderProduct({item: product}) {
     <View>
      {productsData?.length === 0 &&  <ActivityIndicator size="large" /> }
     <FlatList
+      testID='ProductList'
       style={styles.productsList}
       contentContainerStyle={styles.productsListContainer}
       keyExtractor={(item) => item?.id?.toString()}
