@@ -6,7 +6,7 @@ export function CartProvider(props) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('https://my-json-server.typicode.com/benirvingplt/products/products').then((response) => {
+    axios.get('https://demourl').then((response) => {
       console.log(response.data);
       setProducts(response.data);
     });
